@@ -6,4 +6,4 @@ Run
 Rename .env.example to .env and put your private key in there
 
 Ro execute script
-`yarn ts-node index.tx`
+`yarn ts-node index.ts`
