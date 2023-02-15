@@ -51,7 +51,7 @@ if (!privateKey)
     fromToken: squid.tokens.find(
       (t) => t.symbol === "axlUSDC" && t.chainId === 43114
     ).address,
-    fromAmount: ethers.utils.parseUnits("0.1", 6).toString(), //"2000000",
+    fromAmount: ethers.utils.parseUnits("0.3", 6).toString(), //"2000000",
     toChain: 42161,
     toToken: squid.tokens.find(
       (t) => t.symbol === "USDC" && t.chainId === 42161
@@ -93,5 +93,5 @@ if (!privateKey)
     route,
   });
   const txReceipt = await tx.wait();
-  console.log(txReceipt.transactionHash);
+  console.log(`https://axelarscan.io/gmp/${txReceipt.transactionHash}`);
 })();
